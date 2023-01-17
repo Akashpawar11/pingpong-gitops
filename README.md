@@ -1,2 +1,0 @@
-# pingpong-gitops
-# pingpong-gitops
