@@ -63,7 +63,7 @@ spec:
         - name: helm-chart
           securityContext:
             {}
-          image: "nginx:latest"
+          image: "nginx:main-266d5b20f5184942f4af744e4f570dd4ac7fada8"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
