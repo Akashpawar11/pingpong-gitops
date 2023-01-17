@@ -63,7 +63,7 @@ spec:
         - name: helm-chart
           securityContext:
             {}
-          image: "nginx:$GITHUB_SHA"
+          image: "nginx:main-55bfb68027cb7b03d55c9909652a9c966041787c"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
