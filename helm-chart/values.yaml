@@ -4,7 +4,7 @@
 
 replicaCount: "2"
 image:
-  repository: nginx
+  repository: wohligakash/pingpong
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "main-d7ad98f8a3a5e3b69318ab16fb8b5275a5f4ef86"
