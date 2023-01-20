@@ -1,0 +1,41 @@
+name: helm-upgrade-gitops
+
+on:
+    push:
+        branches:
+            - master
+
+env:
+    GITHUB_TOKEN: ${{ secrets.auth_token }}
+
+jobs:
+    helm-actions-testing:
+        runs-on: ubuntu-latest
+
+        steps:
+
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Helm installation
+              run: |                  
+                  curl -LO https://get.helm.sh/helm-v3.8.0-linux-amd64.tar.gz
+                  tar -zxvf helm-v3.8.0-linux-amd64.tar.gz
+                  mv linux-amd64/helm /usr/local/bin/helm
+                  helm version
+
+            - name: Helm template and git--push
+              run: |
+                  git clone https://github.com/Akashpawar11/pingpong-gitops.git                 
+                  cd pingpong-gitops
+                  
+                  helm template uat-env ./helm-chart > manifest-file/manifests.yaml
+                  cat manifest-file/manifests.yaml    
+
+                  git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/Akashpawar11/pingpong-gitops.git
+                  git config user.name "$GITHUB_ACTOR"
+                  git config user.email "akash.pawar@wohlig.com"
+
+                  git add .
+                  git commit -m "commit through pipeline"
+                  git push origin main
