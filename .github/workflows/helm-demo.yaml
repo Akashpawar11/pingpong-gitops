@@ -26,7 +26,8 @@ jobs:
 
             - name: Helm template and git--push
               run: |
-                  git clone https://github.com/Akashpawar11/pingpong-gitops.git                 
+                  git clone https://github.com/Akashpawar11/pingpong-gitops.git 
+                  git checkout master
                   cd pingpong-gitops
                   
                   helm template uat-env ./helm-chart > manifest-file/manifests.yaml
