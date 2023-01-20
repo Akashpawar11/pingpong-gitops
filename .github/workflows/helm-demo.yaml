@@ -36,6 +36,7 @@ jobs:
                   git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/Akashpawar11/pingpong-gitops.git
                   git config user.name "$GITHUB_ACTOR"
                   git config user.email "akash.pawar@wohlig.com"
+                  git config user.name
 
                   git add .
                   git commit -m "commit through pipeline"
