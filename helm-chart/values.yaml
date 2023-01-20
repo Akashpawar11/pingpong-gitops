@@ -3,11 +3,8 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: "2"
-image:
-  repository: wohligakash/pingpong
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "main-bc3c532c75e6600a77bbe9dab95b8563c06b26a0"
+image: "main-bc3c532c75e6600a77bbe9dab95b8563c06b26a0"
+imagePullPolicy: IfNotPresent
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
