@@ -40,4 +40,4 @@ jobs:
 
                   git add .
                   git commit -m "commit through pipeline"
-                  git push origin main
+                  git push origin master
