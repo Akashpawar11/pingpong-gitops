@@ -25,7 +25,7 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - port: 80
+    - port: 8070
       targetPort: http
       protocol: TCP
       name: http
@@ -67,7 +67,7 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 8070
               protocol: TCP
           livenessProbe:
             httpGet:
