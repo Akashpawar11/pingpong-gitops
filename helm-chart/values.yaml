@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: "2"
-image: "wohligakash/pingpong:main-1c3ac6453fbdf7eb1420a48367040c0605485f8f"
+image: "wohligakash/pingpong:main-3cd8399951242857019f3109983d0377fd810978"
 imagePullPolicy: IfNotPresent
 imagePullSecrets: []
 nameOverride: ""
