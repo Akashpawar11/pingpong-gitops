@@ -63,7 +63,7 @@ spec:
         - name: helm-chart
           securityContext:
             {}
-          image: "wohligakash/pingpong:main-2e39fdfcec0cc5163142f56512759bdfc75ce906"
+          image: "wohligakash/pingpong:main-7639a290af2bde1c000ce292deaa1181119ad537"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
