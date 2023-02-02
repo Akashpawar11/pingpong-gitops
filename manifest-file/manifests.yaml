@@ -25,7 +25,7 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - port: 8070
+    - port: 80
       targetPort: http
       protocol: TCP
       name: http
@@ -63,11 +63,11 @@ spec:
         - name: helm-chart
           securityContext:
             {}
-          image: "wohligakash/pingpong:main-edc64596fc12fe6e3967cd7b7516a3b6d0738aed"
+          image: "wohligakash/pingpong:main-defd45f93d951d3a224310177859e45bdcf4b1a9"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
-              containerPort: 8070
+              containerPort: 80
               protocol: TCP
           livenessProbe:
             httpGet:
